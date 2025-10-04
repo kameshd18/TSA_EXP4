@@ -6,6 +6,7 @@
 
 ### AIM:
 To implement ARMA model in python.
+
 ### ALGORITHM:
 1. Import necessary libraries.
 2. Set up matplotlib settings for figure size.
@@ -29,7 +30,7 @@ from statsmodels.tsa.arima.model import ARIMA
 data = pd.read_csv('/content/seattle_weather_1948-2017.csv') 
 print(data.head())
 ```
-```
+```py
 precipitation = data['PRCP'].dropna()
 ar1 = np.array([1, -0.5])  # AR(1) coefficient
 ma1 = np.array([1, 0.5])   # MA(1) coefficient
@@ -69,39 +70,26 @@ plt.plot(residuals)
 plt.title('Residuals of ARMA(2,2) Model')
 plt.show()
 ```
+
 ### OUTPUT:
+
 #### SIMULATED ARMA(1,1) PROCESS:
-
 Partial Autocorrelation
-
-
 
 ![image](https://github.com/user-attachments/assets/e2ad1d66-cc78-4f73-aaaf-dcc79fed3cba)
 
-
-
 Autocorrelation
 
-
 ![image](https://github.com/user-attachments/assets/eba3765e-fd2f-45e4-aace-591365f98864)
-
-
-
 
 ##### SIMULATED ARMA(2,2) PROCESS:
 
 Partial Autocorrelation
 
-
 ![image](https://github.com/user-attachments/assets/dcd1d2ea-16f6-403a-8b0e-55b16a7d6fae)
-
-
 
 Autocorrelation
 
-
 ![image](https://github.com/user-attachments/assets/3f0a1dd5-dac7-44e7-b4f1-02149d56b8ff)
-
-
 ### RESULT:
 Thus, a python program is created to fit ARMA Model successfully.
